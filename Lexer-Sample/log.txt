@@ -1,0 +1,3 @@
+Line: 0 	INVALID ARG, TRYING: "source.swift"
+Line: 0 	------FILE	"source.swift" IS OPEN.
+Line: 0 	

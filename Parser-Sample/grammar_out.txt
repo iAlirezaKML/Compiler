@@ -1,0 +1,17 @@
+E : E '+' T (2) | T (3) ;
+	First Set = { ( , id }
+	Follow Set = { ^$ , + , ) }
+
+F : '(' E ')' (6) | 'epsilon' (7) | 'id' (8) ;
+	First Set = { ( , epsilon , id }
+	Follow Set = { ^$ , + , * , ) }
+
+T : T '*' F (4) | F (5) ;
+	First Set = { ( , epsilon , id }
+	Follow Set = { ^$ , + , * , ) }
+
+Z : E (1) ;
+	First Set = { ( , id }
+	Follow Set = { ^$ }
+
+@TERMINAL Set: { ( , ) , * , + , ^$ , epsilon , id }
